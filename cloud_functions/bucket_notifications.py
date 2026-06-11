@@ -1,39 +1,33 @@
 import base64
 import json
-import functions_framework
 
 
-@functions_framework.cloud_event
-def handle_bucket_event(cloud_event):
-    pubsub_message = cloud_event.data.get("message", {})
+def handle_bucket_notification(message):
+    """Process a Pub/Sub push message coming from Cloud Storage bucket notifications."""
+    attributes = message.get("attributes", {})
+    event_type = attributes.get("eventType")
 
-    encoded_data = pubsub_message.get("data")
-    attributes = pubsub_message.get("attributes", {})
+    encoded_data = message.get("data")
+    if not encoded_data:
+        return "No data in Pub/Sub message", 400
 
-    print("Pub/Sub message received")
-    print(f"Attributes: {attributes}")
+    decoded_data = base64.b64decode(encoded_data).decode("utf-8")
+    event_data = json.loads(decoded_data)
 
-    if encoded_data:
-        decoded_data = base64.b64decode(encoded_data).decode("utf-8")
-        print(f"Decoded message: {decoded_data}")
+    bucket_name = event_data.get("bucket")
+    file_name = event_data.get("name")
 
-        try:
-            event_data = json.loads(decoded_data)
+    print(f"Bucket: {bucket_name}")
+    print(f"File: {file_name}")
+    print(f"Event type: {event_type}")
 
-            bucket_name = event_data.get("bucket")
-            file_name = event_data.get("name")
-            content_type = event_data.get("contentType")
+    if event_type != "OBJECT_FINALIZE":
+        print(f"Skipping event type: {event_type}")
+        return "Skipped non-upload event", 200
 
-            print(f"Bucket: {bucket_name}")
-            print(f"File: {file_name}")
-            print(f"Content type: {content_type}")
+    if not file_name or not file_name.endswith(".csv"):
+        print(f"Skipping non-CSV file: {file_name}")
+        return "Skipped non-CSV file", 200
 
-            if file_name and file_name.endswith(".csv"):
-                print("CSV file uploaded. Later we can process this file into BigQuery.")
-            else:
-                print("Non-CSV file event received.")
-
-        except json.JSONDecodeError:
-            print("Message is not valid JSON.")
-    else:
-        print("No message data found.")
+    print("CSV upload detected. Ready to process into BigQuery.")
+    return "CSV upload processed", 200

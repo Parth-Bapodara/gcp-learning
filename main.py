@@ -1,16 +1,16 @@
-# This is a sample Python script.
+import functions_framework
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+from cloud_functions.bucket_notifications import handle_bucket_notification
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+@functions_framework.http
+def handle_event(request):
+    envelope = request.get_json(silent=True)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print("Cloud Run received request")
+    print(f"Request JSON: {envelope}")
+
+    if not envelope or "message" not in envelope:
+        return "No Pub/Sub message found", 400
+
+    return handle_bucket_notification(envelope["message"])
