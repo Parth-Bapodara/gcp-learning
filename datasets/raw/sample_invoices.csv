@@ -1,0 +1,101 @@
+invoice_id,customer_id,customer_name,store_name,invoice_date,item_name,category,quantity,unit_price,total_amount,payment_method,payment_status,city
+INV0001,CUST001,Aarav Patel,Dmart,2026-06-01,Rice Bag,Grocery,1,850,850,UPI,Paid,Ahmedabad
+INV0002,CUST002,Aditi Sharma,Zudio,2026-06-01,T-Shirt,Clothing,2,499,998,Card,Paid,Surat
+INV0003,CUST003,Arjun Mehta,Reliance Fresh,2026-06-01,Milk Pack,Dairy,3,60,180,Cash,Paid,Vadodara
+INV0004,CUST004,Ananya Shah,Dmart,2026-06-02,Wheat Flour,Grocery,1,420,420,UPI,Paid,Rajkot
+INV0005,CUST005,Vivaan Desai,Zudio,2026-06-02,Jeans,Clothing,1,1299,1299,Card,Paid,Ahmedabad
+INV0006,CUST006,Isha Trivedi,Reliance Fresh,2026-06-02,Fruits,Fruits,2,150,300,UPI,Pending,Surat
+INV0007,CUST007,Reyansh Joshi,Dmart,2026-06-03,Cooking Oil,Grocery,1,180,180,Cash,Paid,Vadodara
+INV0008,CUST008,Kiara Bhatt,Zudio,2026-06-03,Kurti,Clothing,1,899,899,UPI,Paid,Rajkot
+INV0009,CUST009,Krish Raval,Reliance Fresh,2026-06-03,Vegetables,Vegetables,4,70,280,Card,Paid,Ahmedabad
+INV0010,CUST010,Myra Shah,Dmart,2026-06-04,Sugar,Grocery,2,45,90,UPI,Paid,Surat
+INV0011,CUST011,Ayaan Patel,Zudio,2026-06-04,Shirt,Clothing,1,799,799,Card,Pending,Vadodara
+INV0012,CUST012,Saanvi Mehta,Reliance Fresh,2026-06-04,Bread,Bakery,2,40,80,Cash,Paid,Rajkot
+INV0013,CUST013,Advik Sharma,Dmart,2026-06-05,Tea Powder,Grocery,1,220,220,UPI,Paid,Ahmedabad
+INV0014,CUST014,Diya Desai,Zudio,2026-06-05,Dress,Clothing,1,1499,1499,Card,Paid,Surat
+INV0015,CUST015,Kabir Joshi,Reliance Fresh,2026-06-05,Curd,Dairy,2,55,110,UPI,Paid,Vadodara
+INV0016,CUST016,Avni Trivedi,Dmart,2026-06-06,Detergent,Home Care,1,310,310,Cash,Paid,Rajkot
+INV0017,CUST017,Rudra Shah,Zudio,2026-06-06,Shoes,Footwear,1,1799,1799,Card,Paid,Ahmedabad
+INV0018,CUST018,Nisha Raval,Reliance Fresh,2026-06-06,Paneer,Dairy,1,120,120,UPI,Pending,Surat
+INV0019,CUST019,Vihaan Patel,Dmart,2026-06-07,Biscuits,Snacks,5,30,150,Cash,Paid,Vadodara
+INV0020,CUST020,Tara Mehta,Zudio,2026-06-07,Handbag,Accessories,1,999,999,Card,Paid,Rajkot
+INV0021,CUST021,Neil Sharma,Reliance Fresh,2026-06-07,Eggs,Dairy,1,90,90,UPI,Paid,Ahmedabad
+INV0022,CUST022,Priya Desai,Dmart,2026-06-08,Soap,Personal Care,4,35,140,Cash,Paid,Surat
+INV0023,CUST023,Yash Joshi,Zudio,2026-06-08,Jacket,Clothing,1,1999,1999,Card,Pending,Vadodara
+INV0024,CUST024,Riya Trivedi,Reliance Fresh,2026-06-08,Juice,Beverages,2,95,190,UPI,Paid,Rajkot
+INV0025,CUST025,Dhruv Shah,Dmart,2026-06-09,Shampoo,Personal Care,1,260,260,UPI,Paid,Ahmedabad
+INV0026,CUST026,Mira Raval,Zudio,2026-06-09,Scarf,Accessories,2,299,598,Card,Paid,Surat
+INV0027,CUST027,Om Patel,Reliance Fresh,2026-06-09,Butter,Dairy,1,65,65,Cash,Paid,Vadodara
+INV0028,CUST028,Jiya Mehta,Dmart,2026-06-10,Toothpaste,Personal Care,2,85,170,UPI,Paid,Rajkot
+INV0029,CUST029,Harsh Sharma,Zudio,2026-06-10,Cap,Accessories,1,249,249,Cash,Paid,Ahmedabad
+INV0030,CUST030,Anika Desai,Reliance Fresh,2026-06-10,Cheese,Dairy,1,140,140,Card,Pending,Surat
+INV0031,CUST031,Ishaan Joshi,Dmart,2026-06-11,Noodles,Snacks,3,45,135,UPI,Paid,Vadodara
+INV0032,CUST032,Kavya Trivedi,Zudio,2026-06-11,Sandals,Footwear,1,699,699,Card,Paid,Rajkot
+INV0033,CUST033,Manav Shah,Reliance Fresh,2026-06-11,Apples,Fruits,2,180,360,Cash,Paid,Ahmedabad
+INV0034,CUST034,Sara Raval,Dmart,2026-06-12,Coffee,Grocery,1,350,350,UPI,Paid,Surat
+INV0035,CUST035,Eshan Patel,Zudio,2026-06-12,Belt,Accessories,1,399,399,Card,Paid,Vadodara
+INV0036,CUST036,Vanya Mehta,Reliance Fresh,2026-06-12,Tomatoes,Vegetables,3,40,120,UPI,Paid,Rajkot
+INV0037,CUST037,Parth Sharma,Dmart,2026-06-13,Soft Drink,Beverages,2,90,180,Cash,Pending,Ahmedabad
+INV0038,CUST038,Hetvi Desai,Zudio,2026-06-13,Top,Clothing,1,599,599,UPI,Paid,Surat
+INV0039,CUST039,Atharv Joshi,Reliance Fresh,2026-06-13,Potatoes,Vegetables,5,30,150,Cash,Paid,Vadodara
+INV0040,CUST040,Maahi Trivedi,Dmart,2026-06-14,Chips,Snacks,4,20,80,UPI,Paid,Rajkot
+INV0041,CUST041,Dev Shah,Zudio,2026-06-14,Hoodie,Clothing,1,1599,1599,Card,Paid,Ahmedabad
+INV0042,CUST042,Siya Raval,Reliance Fresh,2026-06-14,Oranges,Fruits,2,120,240,UPI,Paid,Surat
+INV0043,CUST043,Rohan Patel,Dmart,2026-06-15,Cereal,Grocery,1,275,275,Card,Paid,Vadodara
+INV0044,CUST044,Navya Mehta,Zudio,2026-06-15,Skirt,Clothing,1,799,799,UPI,Pending,Rajkot
+INV0045,CUST045,Mehul Sharma,Reliance Fresh,2026-06-15,Coconut Water,Beverages,3,50,150,Cash,Paid,Ahmedabad
+INV0046,CUST046,Tanvi Desai,Dmart,2026-06-16,Floor Cleaner,Home Care,1,190,190,UPI,Paid,Surat
+INV0047,CUST047,Jay Joshi,Zudio,2026-06-16,Socks,Accessories,3,99,297,Card,Paid,Vadodara
+INV0048,CUST048,Pooja Trivedi,Reliance Fresh,2026-06-16,Spinach,Vegetables,2,35,70,Cash,Paid,Rajkot
+INV0049,CUST049,Mihir Shah,Dmart,2026-06-17,Handwash,Personal Care,2,120,240,UPI,Paid,Ahmedabad
+INV0050,CUST050,Disha Raval,Zudio,2026-06-17,Wallet,Accessories,1,599,599,Card,Paid,Surat
+INV0051,CUST051,Samar Patel,Reliance Fresh,2026-06-17,Bananas,Fruits,2,60,120,Cash,Pending,Vadodara
+INV0052,CUST052,Kinjal Mehta,Dmart,2026-06-18,Masala,Grocery,4,75,300,UPI,Paid,Rajkot
+INV0053,CUST053,Raj Sharma,Zudio,2026-06-18,Track Pants,Clothing,1,999,999,Card,Paid,Ahmedabad
+INV0054,CUST054,Esha Desai,Reliance Fresh,2026-06-18,Yogurt,Dairy,2,45,90,UPI,Paid,Surat
+INV0055,CUST055,Kunal Joshi,Dmart,2026-06-19,Pulses,Grocery,2,160,320,Cash,Paid,Vadodara
+INV0056,CUST056,Bhumi Trivedi,Zudio,2026-06-19,Sweater,Clothing,1,1399,1399,Card,Pending,Rajkot
+INV0057,CUST057,Nirav Shah,Reliance Fresh,2026-06-19,Grapes,Fruits,1,180,180,UPI,Paid,Ahmedabad
+INV0058,CUST058,Foram Raval,Dmart,2026-06-20,Face Wash,Personal Care,1,210,210,UPI,Paid,Surat
+INV0059,CUST059,Meet Patel,Zudio,2026-06-20,Shorts,Clothing,2,499,998,Card,Paid,Vadodara
+INV0060,CUST060,Khyati Mehta,Reliance Fresh,2026-06-20,Onions,Vegetables,3,45,135,Cash,Paid,Rajkot
+INV0061,CUST061,Hardik Sharma,Dmart,2026-06-21,Pickle,Grocery,1,145,145,UPI,Paid,Ahmedabad
+INV0062,CUST062,Krupa Desai,Zudio,2026-06-21,Earrings,Accessories,1,299,299,Card,Paid,Surat
+INV0063,CUST063,Tejas Joshi,Reliance Fresh,2026-06-21,Ice Cream,Dairy,2,110,220,UPI,Pending,Vadodara
+INV0064,CUST064,Mansi Trivedi,Dmart,2026-06-22,Tissue Roll,Home Care,2,95,190,Cash,Paid,Rajkot
+INV0065,CUST065,Chirag Shah,Zudio,2026-06-22,Formal Shirt,Clothing,1,1199,1199,Card,Paid,Ahmedabad
+INV0066,CUST066,Hiral Raval,Reliance Fresh,2026-06-22,Lemons,Fruits,1,80,80,UPI,Paid,Surat
+INV0067,CUST067,Bhavik Patel,Dmart,2026-06-23,Chocolate,Snacks,5,40,200,Cash,Paid,Vadodara
+INV0068,CUST068,Payal Mehta,Zudio,2026-06-23,Leggings,Clothing,1,499,499,UPI,Paid,Rajkot
+INV0069,CUST069,Darshan Sharma,Reliance Fresh,2026-06-23,Cucumber,Vegetables,2,35,70,Cash,Paid,Ahmedabad
+INV0070,CUST070,Sejal Desai,Dmart,2026-06-24,Mineral Water,Beverages,6,20,120,UPI,Paid,Surat
+INV0071,CUST071,Ankit Joshi,Zudio,2026-06-24,Sunglasses,Accessories,1,899,899,Card,Pending,Vadodara
+INV0072,CUST072,Nirali Trivedi,Reliance Fresh,2026-06-24,Mangoes,Fruits,2,220,440,UPI,Paid,Rajkot
+INV0073,CUST073,Pranav Shah,Dmart,2026-06-25,Jam,Grocery,1,160,160,Cash,Paid,Ahmedabad
+INV0074,CUST074,Riddhi Raval,Zudio,2026-06-25,Watch,Accessories,1,1499,1499,Card,Paid,Surat
+INV0075,CUST075,Harit Patel,Reliance Fresh,2026-06-25,Corn,Vegetables,3,50,150,UPI,Paid,Vadodara
+INV0076,CUST076,Janvi Mehta,Dmart,2026-06-26,Toilet Cleaner,Home Care,1,130,130,Cash,Paid,Rajkot
+INV0077,CUST077,Smit Sharma,Zudio,2026-06-26,Polo T-Shirt,Clothing,2,699,1398,Card,Paid,Ahmedabad
+INV0078,CUST078,Rupal Desai,Reliance Fresh,2026-06-26,Green Peas,Vegetables,2,90,180,UPI,Pending,Surat
+INV0079,CUST079,Naman Joshi,Dmart,2026-06-27,Peanut Butter,Grocery,1,280,280,UPI,Paid,Vadodara
+INV0080,CUST080,Yamini Trivedi,Zudio,2026-06-27,Ethnic Wear,Clothing,1,1899,1899,Card,Paid,Rajkot
+INV0081,CUST081,Vatsal Shah,Reliance Fresh,2026-06-27,Watermelon,Fruits,1,160,160,Cash,Paid,Ahmedabad
+INV0082,CUST082,Komal Raval,Dmart,2026-06-28,Cookies,Snacks,3,55,165,UPI,Paid,Surat
+INV0083,CUST083,Akash Patel,Zudio,2026-06-28,Backpack,Accessories,1,1299,1299,Card,Paid,Vadodara
+INV0084,CUST084,Roshni Mehta,Reliance Fresh,2026-06-28,Capsicum,Vegetables,2,75,150,Cash,Paid,Rajkot
+INV0085,CUST085,Mayur Sharma,Dmart,2026-06-29,Body Lotion,Personal Care,1,240,240,UPI,Paid,Ahmedabad
+INV0086,CUST086,Heena Desai,Zudio,2026-06-29,Perfume,Personal Care,1,799,799,Card,Pending,Surat
+INV0087,CUST087,Jatin Joshi,Reliance Fresh,2026-06-29,Papaya,Fruits,1,90,90,Cash,Paid,Vadodara
+INV0088,CUST088,Urvi Trivedi,Dmart,2026-06-30,Green Tea,Grocery,1,310,310,UPI,Paid,Rajkot
+INV0089,CUST089,Rahul Shah,Zudio,2026-06-30,Sneakers,Footwear,1,2199,2199,Card,Paid,Ahmedabad
+INV0090,CUST090,Mitali Raval,Reliance Fresh,2026-06-30,Broccoli,Vegetables,1,130,130,UPI,Paid,Surat
+INV0091,CUST091,Soham Patel,Dmart,2026-07-01,Cashews,Dry Fruits,1,520,520,Card,Paid,Vadodara
+INV0092,CUST092,Palak Mehta,Zudio,2026-07-01,Dupatta,Accessories,1,349,349,UPI,Paid,Rajkot
+INV0093,CUST093,Varun Sharma,Reliance Fresh,2026-07-01,Almond Milk,Beverages,2,160,320,Cash,Pending,Ahmedabad
+INV0094,CUST094,Neelam Desai,Dmart,2026-07-02,Almonds,Dry Fruits,1,600,600,UPI,Paid,Surat
+INV0095,CUST095,Sameer Joshi,Zudio,2026-07-02,Casual Shoes,Footwear,1,1599,1599,Card,Paid,Vadodara
+INV0096,CUST096,Shreya Trivedi,Reliance Fresh,2026-07-02,Carrots,Vegetables,2,55,110,Cash,Paid,Rajkot
+INV0097,CUST097,Vikram Shah,Dmart,2026-07-03,Raisins,Dry Fruits,1,260,260,UPI,Paid,Ahmedabad
+INV0098,CUST098,Leena Raval,Zudio,2026-07-03,Kids T-Shirt,Clothing,2,399,798,Card,Paid,Surat
+INV0099,CUST099,Abhay Patel,Reliance Fresh,2026-07-03,Mushrooms,Vegetables,1,95,95,UPI,Paid,Vadodara
+INV0100,CUST100,Priyal Mehta,Dmart,2026-07-04,Honey,Grocery,1,280,280,Cash,Paid,Rajkot
