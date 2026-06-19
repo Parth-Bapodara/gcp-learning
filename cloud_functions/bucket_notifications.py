@@ -1,6 +1,8 @@
 import base64
 import json
 
+from cloud_functions.bigquery_loader import load_csv_to_bigquery
+
 
 def handle_bucket_notification(message):
     """Process a Pub/Sub push message coming from Cloud Storage bucket notifications."""
@@ -29,5 +31,6 @@ def handle_bucket_notification(message):
         print(f"Skipping non-CSV file: {file_name}")
         return "Skipped non-CSV file", 200
 
-    print("CSV upload detected. Ready to process into BigQuery.")
-    return "CSV upload processed", 200
+    print("CSV upload detected. Loading into BigQuery.")
+    rows_loaded = load_csv_to_bigquery(bucket_name, file_name)
+    return f"Loaded {rows_loaded} rows into BigQuery", 200
