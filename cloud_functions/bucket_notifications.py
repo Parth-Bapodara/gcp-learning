@@ -13,8 +13,12 @@ def handle_bucket_notification(message):
     if not encoded_data:
         return "No data in Pub/Sub message", 400
 
-    decoded_data = base64.b64decode(encoded_data).decode("utf-8")
-    event_data = json.loads(decoded_data)
+    try:
+        decoded_data = base64.b64decode(encoded_data).decode("utf-8")
+        event_data = json.loads(decoded_data)
+    except (UnicodeDecodeError, json.JSONDecodeError) as error:
+        print(f"Failed to decode Pub/Sub message: {error}")
+        return "Invalid Pub/Sub message", 400
 
     bucket_name = event_data.get("bucket")
     file_name = event_data.get("name")
@@ -32,5 +36,14 @@ def handle_bucket_notification(message):
         return "Skipped non-CSV file", 200
 
     print("CSV upload detected. Loading into BigQuery.")
-    rows_loaded = load_csv_to_bigquery(bucket_name, file_name)
-    return f"Loaded {rows_loaded} rows into BigQuery", 200
+
+    try:
+        result = load_csv_to_bigquery(bucket_name, file_name)
+    except Exception as error:
+        print(f"Failed to process CSV upload: {error}")
+        return f"Failed to load CSV into BigQuery: {error}", 500
+
+    if result["status"] == "duplicate":
+        return "File already processed", 200
+
+    return f"Loaded {result['rows_loaded']} rows into BigQuery", 200
