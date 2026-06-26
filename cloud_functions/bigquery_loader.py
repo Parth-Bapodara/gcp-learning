@@ -3,6 +3,8 @@ from datetime import datetime, timezone
 from google.api_core.exceptions import NotFound
 from google.cloud import bigquery
 
+from cloud_functions.csv_validator import CSVValidationError, validate_invoice_csv
+
 PROJECT_ID = "gcp-invoice-pipeline-499805"
 DATASET_ID = "invoice_analytics"
 TABLE_ID = "raw_invoices"
@@ -73,6 +75,19 @@ def load_csv_to_bigquery(bucket_name, file_name):
     if is_file_already_processed(client, bucket_name, file_name):
         print(f"Skipping duplicate file: gs://{bucket_name}/{file_name}")
         return {"status": "duplicate", "rows_loaded": 0}
+
+    try:
+        validate_invoice_csv(bucket_name, file_name)
+    except CSVValidationError as error:
+        print(f"CSV validation failed: {error}")
+        record_processed_file(
+            client,
+            bucket_name,
+            file_name,
+            status="failed",
+            error_message=str(error),
+        )
+        return {"status": "invalid", "rows_loaded": 0, "error": str(error)}
 
     table_ref = _get_table_ref(TABLE_ID)
     uri = f"gs://{bucket_name}/{file_name}"
