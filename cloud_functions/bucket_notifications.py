@@ -46,4 +46,7 @@ def handle_bucket_notification(message):
     if result["status"] == "duplicate":
         return "File already processed", 200
 
+    if result["status"] == "invalid":
+        return f"CSV validation failed: {result['error']}", 200
+
     return f"Loaded {result['rows_loaded']} rows into BigQuery", 200
