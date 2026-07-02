@@ -4,6 +4,6 @@ SELECT
   city,
   COUNT(*) AS invoice_count,
   SUM(total_amount) AS daily_revenue
-FROM `gcp-invoice-pipeline-499805.invoice_analytics.raw_invoices`
+FROM `gcp-invoice-pipeline-499805.invoice_analytics.vw_stg_invoices`
 GROUP BY invoice_date, city
 ORDER BY invoice_date DESC, invoice_count DESC;
