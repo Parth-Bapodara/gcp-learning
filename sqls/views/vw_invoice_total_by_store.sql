@@ -4,6 +4,6 @@ SELECT
   COUNT(*) AS invoice_count,
   SUM(total_amount) AS total_revenue,
   ROUND(AVG(total_amount), 2) AS avg_invoice_amount
-FROM `gcp-invoice-pipeline-499805.invoice_analytics.raw_invoices`
+FROM `gcp-invoice-pipeline-499805.invoice_analytics.vw_stg_invoices`
 GROUP BY store_name
 ORDER BY total_revenue DESC;
