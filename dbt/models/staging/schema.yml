@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_invoices
+    description: Cleaned staging model for invoice data loaded from raw CSV files.
+    columns:
+      - name: invoice_id
+        tests:
+          - not_null
+          - unique
+      - name: payment_status
+        tests:
+          - accepted_values:
+              values: ["Paid", "Pending", "Unknown"]
+      - name: total_amount
+        tests:
+          - not_null

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: invoice_analytics
+    database: gcp-invoice-pipeline-499805
+    schema: invoice_analytics
+    tables:
+      - name: raw_invoices
