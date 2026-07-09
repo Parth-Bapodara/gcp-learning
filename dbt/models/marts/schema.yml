@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: invoice_summary_by_store
+    description: Store-level invoice revenue and count summary.
+    columns:
+      - name: store_name
+        tests:
+          - not_null
+      - name: invoice_count
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null
+
+  - name: pending_invoices
+    description: Invoice records where payment is still pending.
+    columns:
+      - name: invoice_id
+        tests:
+          - not_null
+      - name: invoice_date
+        tests:
+          - not_null
+      - name: total_amount
+        tests:
+          - not_null
+
+  - name: daily_invoice_summary
+    description: Daily invoice counts and revenue summary.
+    columns:
+      - name: invoice_date
+        tests:
+          - not_null
+          - unique
+      - name: invoice_count
+        tests:
+          - not_null
+      - name: total_revenue
+        tests:
+          - not_null

@@ -11,3 +11,9 @@ venv/
 
 # OS files
 .DS_Store
+
+# dbt generated files
+dbt/logs/
+dbt/target/
+dbt/dbt_packages/
+
